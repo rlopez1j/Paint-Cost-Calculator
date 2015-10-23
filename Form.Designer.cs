@@ -197,11 +197,11 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(45, 324);
+            this.textBox1.Location = new System.Drawing.Point(45, 242);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(434, 186);
+            this.textBox1.Size = new System.Drawing.Size(434, 278);
             this.textBox1.TabIndex = 16;
             this.textBox1.Text = "\r\n";
             this.textBox1.Visible = false;

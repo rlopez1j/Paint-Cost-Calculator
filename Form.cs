@@ -18,59 +18,27 @@ namespace cSharpHw1
             InitializeComponent();
         }
 
-        private void Form_Load(object sender, EventArgs e)
-        {
-
-        }
+        private void Form_Load(object sender, EventArgs e){}
 
         private void Submit_Click(object sender, EventArgs e)
         {
+            Submit.Visible = false;
+            Next.Visible = false;
+
             textBox1.Visible = true;
-            textBox1.Text = "Customer Name:  " + Display.show_customerName()+Environment.NewLine
-                +"Phone Number: " + Display.show_phoneNumber() + Environment.NewLine;
+
+            textBox1.Text = Display.displayInfo();
         }
 
-        private void LabelCustomerName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PaintPrice_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void WallHeight_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PhoneNumber_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NumWalls_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void WallLength_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LabelWallLength_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CustomerName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Next_Click(object sender, EventArgs e)
+       private void LabelCustomerName_Click(object sender, EventArgs e){}
+       private void PaintPrice_TextChanged(object sender, EventArgs e){}
+       private void WallHeight_TextChanged(object sender, EventArgs e){}
+       private void PhoneNumber_TextChanged(object sender, EventArgs e){}
+       private void NumWalls_TextChanged(object sender, EventArgs e){}
+       private void WallLength_TextChanged(object sender, EventArgs e){}
+       private void LabelWallLength_Click(object sender, EventArgs e){}
+       private void CustomerName_TextChanged(object sender, EventArgs e){}
+       private void Next_Click(object sender, EventArgs e)
         {
             instances--;
             if (instances == 0)
@@ -115,9 +83,6 @@ namespace cSharpHw1
              instances = Display.show_numWalls();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
+        private void textBox1_TextChanged(object sender, EventArgs e){}
     }
 }
