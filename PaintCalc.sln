@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cSharpHw1", "cSharpHw1.csproj", "{BCAF5229-DFAA-4665-9638-633E7714D645}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaintCalc", "PaintCalc.csproj", "{BCAF5229-DFAA-4665-9638-633E7714D645}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

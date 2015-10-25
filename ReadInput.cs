@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace cSharpHw1
+namespace PaintCalc
 {
     class ReadInput
     {
@@ -20,7 +20,6 @@ namespace cSharpHw1
         public static void getPaintPrice(string price) { paintPrice = Convert.ToDecimal(price); }
         public static void getNumWalls(string n) { numWalls = Convert.ToInt32(n); }
         public static void getWallLength(string l) { wallLength = Convert.ToDouble(l); }
-        public static void getWallHeight(string h) { wallHeight = Convert.ToDouble(h); }
-       
+        public static void getWallHeight(string h) { wallHeight = Convert.ToDouble(h); }    
     }
 }

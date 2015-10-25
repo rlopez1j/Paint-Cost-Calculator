@@ -1,4 +1,4 @@
-﻿namespace cSharpHw1
+﻿namespace PaintCalc
 {
     partial class Form
     {
@@ -42,14 +42,13 @@
             this.LabelWallHeight = new System.Windows.Forms.Label();
             this.LabelNumWalls = new System.Windows.Forms.Label();
             this.Next = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.Continue = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Data = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // CustomerName
             // 
-            this.CustomerName.Location = new System.Drawing.Point(127, 11);
+            this.CustomerName.Location = new System.Drawing.Point(250, 18);
             this.CustomerName.Name = "CustomerName";
             this.CustomerName.Size = new System.Drawing.Size(157, 20);
             this.CustomerName.TabIndex = 0;
@@ -57,7 +56,7 @@
             // 
             // Submit
             // 
-            this.Submit.Location = new System.Drawing.Point(263, 242);
+            this.Submit.Location = new System.Drawing.Point(368, 242);
             this.Submit.Name = "Submit";
             this.Submit.Size = new System.Drawing.Size(75, 23);
             this.Submit.TabIndex = 1;
@@ -68,7 +67,7 @@
             // 
             // PhoneNumber
             // 
-            this.PhoneNumber.Location = new System.Drawing.Point(127, 52);
+            this.PhoneNumber.Location = new System.Drawing.Point(250, 56);
             this.PhoneNumber.Name = "PhoneNumber";
             this.PhoneNumber.Size = new System.Drawing.Size(157, 20);
             this.PhoneNumber.TabIndex = 2;
@@ -76,7 +75,7 @@
             // 
             // PaintPrice
             // 
-            this.PaintPrice.Location = new System.Drawing.Point(127, 89);
+            this.PaintPrice.Location = new System.Drawing.Point(250, 96);
             this.PaintPrice.Name = "PaintPrice";
             this.PaintPrice.Size = new System.Drawing.Size(157, 20);
             this.PaintPrice.TabIndex = 3;
@@ -84,7 +83,7 @@
             // 
             // WallLength
             // 
-            this.WallLength.Location = new System.Drawing.Point(127, 169);
+            this.WallLength.Location = new System.Drawing.Point(250, 170);
             this.WallLength.Name = "WallLength";
             this.WallLength.Size = new System.Drawing.Size(157, 20);
             this.WallLength.TabIndex = 5;
@@ -93,7 +92,7 @@
             // 
             // WallHeight
             // 
-            this.WallHeight.Location = new System.Drawing.Point(127, 207);
+            this.WallHeight.Location = new System.Drawing.Point(250, 207);
             this.WallHeight.Name = "WallHeight";
             this.WallHeight.Size = new System.Drawing.Size(157, 20);
             this.WallHeight.TabIndex = 6;
@@ -102,7 +101,7 @@
             // 
             // NumWalls
             // 
-            this.NumWalls.Location = new System.Drawing.Point(127, 130);
+            this.NumWalls.Location = new System.Drawing.Point(250, 130);
             this.NumWalls.Name = "NumWalls";
             this.NumWalls.Size = new System.Drawing.Size(157, 20);
             this.NumWalls.TabIndex = 4;
@@ -111,7 +110,7 @@
             // LabelCustomerName
             // 
             this.LabelCustomerName.AutoSize = true;
-            this.LabelCustomerName.Location = new System.Drawing.Point(13, 18);
+            this.LabelCustomerName.Location = new System.Drawing.Point(102, 25);
             this.LabelCustomerName.Name = "LabelCustomerName";
             this.LabelCustomerName.Size = new System.Drawing.Size(85, 13);
             this.LabelCustomerName.TabIndex = 7;
@@ -121,7 +120,7 @@
             // LabelPhoneNumber
             // 
             this.LabelPhoneNumber.AutoSize = true;
-            this.LabelPhoneNumber.Location = new System.Drawing.Point(12, 59);
+            this.LabelPhoneNumber.Location = new System.Drawing.Point(102, 63);
             this.LabelPhoneNumber.Name = "LabelPhoneNumber";
             this.LabelPhoneNumber.Size = new System.Drawing.Size(81, 13);
             this.LabelPhoneNumber.TabIndex = 8;
@@ -130,7 +129,7 @@
             // LabelPaintPrices
             // 
             this.LabelPaintPrices.AutoSize = true;
-            this.LabelPaintPrices.Location = new System.Drawing.Point(13, 96);
+            this.LabelPaintPrices.Location = new System.Drawing.Point(102, 103);
             this.LabelPaintPrices.Name = "LabelPaintPrices";
             this.LabelPaintPrices.Size = new System.Drawing.Size(73, 13);
             this.LabelPaintPrices.TabIndex = 9;
@@ -139,7 +138,7 @@
             // LabelWallLength
             // 
             this.LabelWallLength.AutoSize = true;
-            this.LabelWallLength.Location = new System.Drawing.Point(13, 169);
+            this.LabelWallLength.Location = new System.Drawing.Point(102, 172);
             this.LabelWallLength.Name = "LabelWallLength";
             this.LabelWallLength.Size = new System.Drawing.Size(67, 13);
             this.LabelWallLength.TabIndex = 11;
@@ -150,7 +149,7 @@
             // LabelWallHeight
             // 
             this.LabelWallHeight.AutoSize = true;
-            this.LabelWallHeight.Location = new System.Drawing.Point(13, 207);
+            this.LabelWallHeight.Location = new System.Drawing.Point(102, 214);
             this.LabelWallHeight.Name = "LabelWallHeight";
             this.LabelWallHeight.Size = new System.Drawing.Size(65, 13);
             this.LabelWallHeight.TabIndex = 12;
@@ -160,7 +159,7 @@
             // LabelNumWalls
             // 
             this.LabelNumWalls.AutoSize = true;
-            this.LabelNumWalls.Location = new System.Drawing.Point(12, 130);
+            this.LabelNumWalls.Location = new System.Drawing.Point(102, 137);
             this.LabelNumWalls.Name = "LabelNumWalls";
             this.LabelNumWalls.Size = new System.Drawing.Size(88, 13);
             this.LabelNumWalls.TabIndex = 10;
@@ -168,7 +167,7 @@
             // 
             // Next
             // 
-            this.Next.Location = new System.Drawing.Point(172, 242);
+            this.Next.Location = new System.Drawing.Point(287, 242);
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(75, 23);
             this.Next.TabIndex = 13;
@@ -177,17 +176,9 @@
             this.Next.Visible = false;
             this.Next.Click += new System.EventHandler(this.Next_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(42, 281);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 14;
-            // 
             // Continue
             // 
-            this.Continue.Location = new System.Drawing.Point(224, 167);
+            this.Continue.Location = new System.Drawing.Point(207, 178);
             this.Continue.Name = "Continue";
             this.Continue.Size = new System.Drawing.Size(75, 23);
             this.Continue.TabIndex = 15;
@@ -195,26 +186,24 @@
             this.Continue.UseVisualStyleBackColor = true;
             this.Continue.Click += new System.EventHandler(this.Continue_Click);
             // 
-            // textBox1
+            // Data
             // 
-            this.textBox1.Location = new System.Drawing.Point(45, 242);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(434, 278);
-            this.textBox1.TabIndex = 16;
-            this.textBox1.Text = "\r\n";
-            this.textBox1.Visible = false;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.Data.Location = new System.Drawing.Point(34, 18);
+            this.Data.Multiline = true;
+            this.Data.Name = "Data";
+            this.Data.ReadOnly = true;
+            this.Data.Size = new System.Drawing.Size(434, 225);
+            this.Data.TabIndex = 16;
+            this.Data.Text = "\r\n";
+            this.Data.Visible = false;
+            this.Data.TextChanged += new System.EventHandler(this.Data_TextChanged);
             // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(527, 542);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(527, 280);
             this.Controls.Add(this.Continue);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.Submit);
             this.Controls.Add(this.Next);
             this.Controls.Add(this.LabelNumWalls);
@@ -229,6 +218,7 @@
             this.Controls.Add(this.PaintPrice);
             this.Controls.Add(this.PhoneNumber);
             this.Controls.Add(this.CustomerName);
+            this.Controls.Add(this.Data);
             this.Name = "Form";
             this.Text = "Paint Calculator";
             this.Load += new System.EventHandler(this.Form_Load);
@@ -254,8 +244,7 @@
         private System.Windows.Forms.Label LabelWallHeight;
         private System.Windows.Forms.Label LabelNumWalls;
         private System.Windows.Forms.Button Next;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Continue;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Data;
     }
 }

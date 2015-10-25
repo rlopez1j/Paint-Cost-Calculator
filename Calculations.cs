@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace cSharpHw1
+namespace PaintCalc
 {
     class Calculations:ReadInput
     {
         private const decimal taxRate = 0.0825M;
         private const decimal laborRate = 0.60M;
+        protected static DateTime date = DateTime.Today;
 
-        protected static string date;
         protected static double sqFt;
         protected static double numGallons;
         protected static decimal laborCost;
@@ -20,11 +20,6 @@ namespace cSharpHw1
         protected static decimal tax;
         protected static decimal grandTotal;
 
-        private static void calc_date()
-        {
-            DateTime D = DateTime.Today;
-            date = D.ToString("D");
-        }
         private static void calc_sqFt() { sqFt += (wallHeight * wallLength); }
         private static void calc_numGallons(){ numGallons = sqFt / 400; }
         private static void calc_paintCost() {  paintCost = paintPrice * Convert.ToDecimal(numGallons); }

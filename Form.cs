@@ -8,11 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace cSharpHw1
+namespace PaintCalc
 {
     public partial class Form : System.Windows.Forms.Form
     {
         int instances;
+        int wallNumber = 1;
         public Form()
         {
             InitializeComponent();
@@ -22,12 +23,25 @@ namespace cSharpHw1
 
         private void Submit_Click(object sender, EventArgs e)
         {
-            Submit.Visible = false;
-            Next.Visible = false;
+            Controls.Remove(Submit);
+            Controls.Remove(Next);
+            Controls.Remove(CustomerName);
+            Controls.Remove(PhoneNumber);
+            Controls.Remove(PaintPrice);
+            Controls.Remove(NumWalls);
+            Controls.Remove(WallLength);
+            Controls.Remove(WallHeight);
+            Controls.Remove(LabelCustomerName);
+            Controls.Remove(LabelPhoneNumber);
+            Controls.Remove(LabelPaintPrices);
+            Controls.Remove(LabelNumWalls);
+            Controls.Remove(LabelWallLength);
+            Controls.Remove(LabelWallHeight);
 
-            textBox1.Visible = true;
+            //Calculations.calc_all();
 
-            textBox1.Text = Display.displayInfo();
+            Data.Visible = true;
+            Data.Text = Display.displayInfo();
         }
 
        private void LabelCustomerName_Click(object sender, EventArgs e){}
@@ -40,49 +54,81 @@ namespace cSharpHw1
        private void CustomerName_TextChanged(object sender, EventArgs e){}
        private void Next_Click(object sender, EventArgs e)
         {
-            instances--;
-            if (instances == 0)
+            //if nothing is inputed into the textboxes
+            if (WallHeight.Text == "" || WallLength.Text == "")
             {
-                Next.Enabled = false;
-                WallHeight.ReadOnly = true;
-                WallLength.ReadOnly = true;
-                Submit.Visible = true;
+                if (WallHeight.Text == "")
+                    MessageBox.Show("Please Enter A Wall Height.");
+                if (WallLength.Text == "")
+                    MessageBox.Show("Please Enter A Wall Length.");
             }
             else
             {
+                wallNumber++;
+                instances--;
+
                 ReadInput.getWallHeight(WallHeight.Text);
                 ReadInput.getWallLength(WallLength.Text);
 
-                Calculations.calc_all();
-                WallHeight.Clear();
-                WallLength.Clear();
-            } 
+                if (instances == 0)
+                {
+                    Next.Enabled = false;
+                    WallHeight.ReadOnly = true;
+                    WallLength.ReadOnly = true;
+                    Submit.Visible = true;
+                    Calculations.calc_all();
+                }
+                else
+                {
+                    WallHeight.Clear();
+                    WallLength.Clear();
+
+                    Calculations.calc_all();
+
+                }
+            }
         }
 
         private void Continue_Click(object sender, EventArgs e)
         {
-            Continue.Visible = false;
-            Next.Visible = true;
+            //checks that values were inputed into the textbox
+            if (CustomerName.Text == "" || PhoneNumber.Text == "" //need to find a more elegant solution to this, if possible
+                || PaintPrice.Text == "" || NumWalls.Text == "")
+            {
+                if (CustomerName.Text == "")
+                    MessageBox.Show("Please Enter Customer Name");
+                if (PhoneNumber.Text == "")
+                    MessageBox.Show("Please Enter Phone Number");
+                if (PaintPrice.Text == "")
+                    MessageBox.Show("Please Enter Price of Paint.");
+                if (NumWalls.Text == "")
+                    MessageBox.Show("Please Enter Number of Walls.");
+            }
+            else
+            {
+                Controls.Remove(Continue);
 
-            WallLength.Visible = true;
-            WallHeight.Visible = true;
+                Next.Visible = true;
+                WallLength.Visible = true;
+                WallHeight.Visible = true;
+                LabelWallHeight.Visible = true;
+                LabelWallLength.Visible = true;
 
-            LabelWallHeight.Visible = true;
-            LabelWallLength.Visible = true;
+                ReadInput.getCustomerName(CustomerName.Text);
+                ReadInput.getPhoneNum(PhoneNumber.Text);
+                ReadInput.getPaintPrice(PaintPrice.Text);
+                ReadInput.getNumWalls(NumWalls.Text);
 
-            ReadInput.getCustomerName(CustomerName.Text);
-            ReadInput.getPhoneNum(PhoneNumber.Text);
-            ReadInput.getPaintPrice(PaintPrice.Text);
-            ReadInput.getNumWalls(NumWalls.Text);
+                CustomerName.ReadOnly = true;
+                PhoneNumber.ReadOnly = true;
+                PaintPrice.ReadOnly = true;
+                NumWalls.ReadOnly = true;
 
-            CustomerName.ReadOnly = true;
-            PhoneNumber.ReadOnly = true;
-            PaintPrice.ReadOnly = true;
-            NumWalls.ReadOnly = true;
-
-             instances = Display.show_numWalls();
+                instances = Convert.ToInt32(NumWalls.Text);
+                wallNumber = 1;
+            }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e){}
+        private void Data_TextChanged(object sender, EventArgs e){}
     }
 }
