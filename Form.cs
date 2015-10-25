@@ -38,8 +38,6 @@ namespace PaintCalc
             Controls.Remove(LabelWallLength);
             Controls.Remove(LabelWallHeight);
 
-            //Calculations.calc_all();
-
             Data.Visible = true;
             Data.Text = Display.displayInfo();
         }
